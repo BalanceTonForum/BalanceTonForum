@@ -1,0 +1,8 @@
+.brands {
+    padding: 0;
+}
+
+.brands li {
+    list-style-type: none;
+    display: inline-block;
+}
