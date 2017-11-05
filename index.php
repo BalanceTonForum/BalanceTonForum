@@ -60,7 +60,7 @@ $app->get('/{brand}', function (Request $request, Response $response) {
         $response,
         'messages.tpl',
         [
-            'brand' => '@'.$request->getAttribute('brand'),
+            'brand' => '@'.htmlspecialchars($request->getAttribute('brand')),
             'messages' => [
                 "Bjr %s savez-vous qu'en tant qu'annonceur sur @JVCom vous soutenez".
                     "le harcèlement des femmes? #BalanceTonForum",
