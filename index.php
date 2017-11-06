@@ -74,7 +74,7 @@ $app->get('/{brand}', function (Request $request, Response $response) {
         [
             'brand' => '@'.htmlspecialchars($request->getAttribute('brand')),
             'messages' => [
-                "Bjr %s savez-vous qu'en tant qu'annonceur sur @JVCom vous soutenez".
+                "Bjr %s savez-vous qu'en tant qu'annonceur sur @JVCom vous soutenez ".
                     "le harcèlement des femmes? #BalanceTonForum",
                 "Quelle tristesse %s de savoir qu'en annonçant sur @JVCom vous associez ".
                     "votre image au harcèlement des femmes. #BalanceTonForum",
