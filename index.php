@@ -7,7 +7,7 @@ use Slim\Views;
 
 require_once __DIR__.'/vendor/autoload.php';
 
-$app = new App;
+$app = new App();
 $container = $app->getContainer();
 
 $container['view'] = function ($c) {
@@ -60,8 +60,8 @@ $app->get('/', function (Request $request, Response $response) {
                 'Sosh_fr',
                 'spotifyfrance',
                 'vw_france',
-                'wootbox_fr'
-            ]
+                'wootbox_fr',
+            ],
         ]
     );
 
@@ -72,27 +72,27 @@ $app->get('/{brand}', function (Request $request, Response $response) {
         $response,
         'messages.tpl',
         [
-            'brand' => '@'.htmlspecialchars($request->getAttribute('brand')),
+            'brand'    => '@'.htmlspecialchars($request->getAttribute('brand')),
             'messages' => [
                 "Bjr %s savez-vous qu'en tant qu'annonceur sur @JVCom vous soutenez ".
-                    "le harcèlement des femmes? #BalanceTonForum",
+                    'le harcèlement des femmes? #BalanceTonForum',
                 "Quelle tristesse %s de savoir qu'en annonçant sur @JVCom vous associez ".
-                    "votre image au harcèlement des femmes. #BalanceTonForum",
-                "Dites %s vous savez qu’en annonçant sur @JVCom vous cautionnez ".
+                    'votre image au harcèlement des femmes. #BalanceTonForum',
+                'Dites %s vous savez qu’en annonçant sur @JVCom vous cautionnez '.
                     "le harcèlement des femmes qui s'y cultivent ? #BalanceTonForum",
-                "Dites %s à quel moment annoncer sur @JVCom et associer votre image ".
-                    "au harcèlement des femmes semble une bonne idée ? #BalanceTonForum",
-                "Dites %s vous n’avez pas peur de vous griller en annonçant sur @JVCom ".
-                    "où fleurit le harcèlement des femmes ? #BalanceTonForum",
-                "Bonjour %s alors ça brade le harcèlement sur @JVCom ? ".
-                    "Ca correspond à votre positionnement de marque ? #BalanceTonForum",
-                "Salut %s, il y a ta pub sur @JVCom, un forum misogyne, raciste ".
-                    "et qui harcèle des femmes. Pas de problème ? #BalanceTonForum",
+                'Dites %s à quel moment annoncer sur @JVCom et associer votre image '.
+                    'au harcèlement des femmes semble une bonne idée ? #BalanceTonForum',
+                'Dites %s vous n’avez pas peur de vous griller en annonçant sur @JVCom '.
+                    'où fleurit le harcèlement des femmes ? #BalanceTonForum',
+                'Bonjour %s alors ça brade le harcèlement sur @JVCom ? '.
+                    'Ca correspond à votre positionnement de marque ? #BalanceTonForum',
+                'Salut %s, il y a ta pub sur @JVCom, un forum misogyne, raciste '.
+                    'et qui harcèle des femmes. Pas de problème ? #BalanceTonForum',
                 "Bjr 👋 %s vous n'avez pas honte de votre partenariat avec un site ".
-                    "encourageant la haine et le cyber-harcèlement ? #BalanceTonForum",
-                "Bjr 👋 %s allez-vous vous désolidariser de @JVCom pour ne plus soutenir ".
-                    "la haine et le cyber-harcèlement ? #Balancetonforum"
-            ]
+                    'encourageant la haine et le cyber-harcèlement ? #BalanceTonForum',
+                'Bjr 👋 %s allez-vous vous désolidariser de @JVCom pour ne plus soutenir '.
+                    'la haine et le cyber-harcèlement ? #Balancetonforum',
+            ],
         ]
     );
 
