@@ -5,7 +5,7 @@
 <h3>Étape 1&nbsp;: choisissez une marque</h3>
 <ul class="brands txt--center">
     {foreach $brands as $brand}
-        <li><a href="{path_for name='messages' data=['brand' => $brand]}"><img src="https://twitter.com/{$brand}/profile_image?size=bigger" alt="{$brand}" /></a></li>
+        <li><a href="{path_for name='messages' data=['brand' => $brand]}" title="{$brand}"><img src="https://twitter.com/{$brand}/profile_image?size=bigger" alt="{$brand}" /></a></li>
     {/foreach}
 </ul>
 
