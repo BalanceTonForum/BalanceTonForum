@@ -43,6 +43,7 @@ $app->get('/', function (Request $request, Response $response) {
                 'Hellobank_fr',
                 'HP_France',
                 'HyperX',
+                'IceWatchFR',
                 'LaRedouteFr',
                 'lidlfrance',
                 'lineage2europe',
